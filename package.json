@@ -1,0 +1,23 @@
+{
+  "name": "world-chat",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "build": "netlify deploy --prod",
+    "start": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.19.2",
+    "serverless-http": "^3.2.0",
+    "socket.io": "^4.7.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  },
+  "keywords": [],
+  "description": ""
+}

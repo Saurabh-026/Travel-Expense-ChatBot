@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.8/purify.min.js"></script>
+
+    <title>World-Chat</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/emoji-mart@latest/css/emoji-mart.css"
+    />
+    <link rel="stylesheet" href="./styling.css" />
+    <script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+  </head>
+  <body>
+    <div class="custom-cursor"><div class="cursor-dot"></div></div>
+    <div class="terminal">
+      <div class="terminal-header">CHAT BOT
+        <button class="disconnect-button" id="disconnect-button"><span>⌀</span></button>
+      </div>
+      <div class="status-bar">
+        <div class="connection-status">Welcome to Chat Terminal!</div>
+        <div class="clock">00:00:00</div>
+        <div class="users-online">
+          Users online: <span class="user-count">0</span>
+        </div>
+      </div>
+      <div class="chat-messages">
+        <div class="message received">
+         
+        </div>
+        <div class="message sent">
+        
+        </div>
+      </div>
+      <div class="chat-input">
+        <button id="emoji-button" aria-label="Open emoji picker">😊</button>
+        <button id="gif-button" aria-label="Open GIF picker">GIF</button>
+        <input
+          type="text"
+          placeholder="Type your message..."
+          class="input"
+          aria-label="Chat input"
+        />
+        <button id="send-button" aria-label="Send message">Send</button>
+      </div>
+    </div>
+    <div id="emoji-picker" style="display: none"></div>
+    <div id="gif-picker" style="display: none">
+      <input type="text" id="gif-search" placeholder="Search GIFs..." />
+      <div id="gif-results"></div>
+    </div>
+   
+    <script src="client.js"></script>
+    <script src="support.js"></script>
+  </body>
+</html>
