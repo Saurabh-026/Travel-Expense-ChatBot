@@ -10,7 +10,7 @@ const server = http.createServer(app);
 const io = new Server(server, { connectionStateRecovery: {} });
 const PORT = process.env.PORT || 8000;
 
-const ai = process.env.GEMINI_API ? new GoogleGenerativeAI(process.env.GEMINI_API) : null;
+const ai =  new GoogleGenerativeAI(process.env.GEMINI_API); 
 const travelExpenses = [];
 let onlineUsers = [];
 
