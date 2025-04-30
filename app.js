@@ -19,7 +19,7 @@ app.use(express.static(path.resolve('./public')));
 
 async function getCurrencyConversion(amount, fromCurrency, toCurrency) {
     console.log(`getCurrencyConversion called with: amount=${amount}, fromCurrency=${fromCurrency}, toCurrency=${toCurrency}`);
-    return `Feature not implemented: Cannot convert ${amount} ${fromCurrency} to ${toCurrency}.`;
+    return `Feature not implemented: Cannot convert ${amount} ${fromCurrency} to ${toCurrency}.`;gem
 }
 
 io.on('connection', (socket) => {
